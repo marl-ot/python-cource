@@ -54,5 +54,5 @@ type Query {
 type Mutation {
     createCard(card_id: ID!, card_number: String!, end_date: String, cvv: String!, card_type: String!, person: String!, is_active: Boolean): CardResult!
     deleteCard(id: ID!): DeleteResult!
-    updateCard(id: ID!, newCardData: CardInput): UpdateResult!
+    updateCard(id: ID!, newCardData: CardInput!): UpdateResult!
 }
