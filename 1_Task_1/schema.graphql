@@ -1,0 +1,58 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type BankCard {
+    card_id: ID!
+    card_number: String!
+    end_date: String!
+    cvv: String!
+    card_type: String!
+    person: String!
+    is_active: Boolean!
+}
+
+type CardResult {
+    success: Boolean!
+    errors: [String]
+    card: BankCard
+}
+
+type CardsResult {
+    success: Boolean!
+    errors: [String]
+    cards: [BankCard]
+}
+
+type DeleteResult {
+    success: Boolean!
+    message: String
+    errors: [String]
+}
+
+type UpdateResult {
+    success: Boolean!
+    errors: [String]
+    card: BankCard
+}
+
+input CardInput {
+    cardNumber: String
+    endDate: String
+    cvv: String
+    cardType: String
+    person: String
+    isActive: Boolean
+}
+
+type Query {
+    listCards: CardsResult!
+    getCard(id: ID!): CardResult
+}
+
+type Mutation {
+    createCard(card_id: ID!, card_number: String!, end_date: String, cvv: String!, card_type: String!, person: String!, is_active: Boolean): CardResult!
+    deleteCard(id: ID!): DeleteResult!
+    updateCard(id: ID!, newCardData: CardInput): UpdateResult!
+}
