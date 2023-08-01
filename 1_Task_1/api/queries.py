@@ -1,6 +1,7 @@
 from ariadne import convert_kwargs_to_snake_case, snake_case_fallback_resolvers
 
 
+
 def listCards_revolver(obj, info):
     from .models import BankCard
     try:
@@ -21,6 +22,7 @@ def listCards_revolver(obj, info):
 @convert_kwargs_to_snake_case
 def getCard_resolver(obj, info, id):
     from .models import BankCard
+    
     try:
         card = BankCard.query.get(id)
         payload = {

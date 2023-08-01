@@ -1,11 +1,12 @@
 from datetime import date
 from ariadne import convert_kwargs_to_snake_case
 from api import db
-from api.models import BankCard
+
 
 
 @convert_kwargs_to_snake_case
 def create_card_resolver(obj, info, card_id, card_number, cvv, card_type, person):
+    from api.models import BankCard
     try:
         today = date.today()
         card = BankCard(
@@ -27,6 +28,7 @@ def create_card_resolver(obj, info, card_id, card_number, cvv, card_type, person
 
 @convert_kwargs_to_snake_case
 def deleteCard_resolver(obj, info, id):
+    from api.models import BankCard
     try:
         card = BankCard.query.get(id)
         if card:
@@ -51,6 +53,7 @@ def deleteCard_resolver(obj, info, id):
 
 @convert_kwargs_to_snake_case
 def updateCard_resolver(obj, info, id, new_card_data=None):
+    from api.models import BankCard
     try:
         card = BankCard.query.get(id)
         if new_card_data is not None:
