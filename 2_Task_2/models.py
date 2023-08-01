@@ -34,14 +34,14 @@ class Wishlists(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String(150))
     price = Column(Integer)
-    user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship('User', back_populates='wishlists')
+    user_id = Column(Integer, ForeignKey('users.id'))
+    users = relationship('Users', back_populates='wishlists')
 
-class User(Base):
-    __tablename__ = 'user'
+class Users(Base):
+    __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
     first_name = Column(String(100))
     last_name = Column(String(100))
     email = Column(String(100))
     password = Column(String(200))
-    wishlists = relationship('Wishlists', back_populates='user')
+    wishlists = relationship('Wishlists', back_populates='users')

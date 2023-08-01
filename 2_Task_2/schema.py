@@ -1,5 +1,5 @@
 from models import (
-    User as UserModel,
+    Users as UserModel,
     Wishlists as WishlistsModel,
     session
 )
@@ -10,6 +10,12 @@ from graphene_sqlalchemy import (
     SQLAlchemyObjectType
 )
 from typing import Optional
+
+# test = str(
+#         bcrypt.generate_password_hash("test"),
+#         'utf-8'
+#     )
+# print(test)
 
 # types
 class User(SQLAlchemyObjectType):
@@ -37,7 +43,7 @@ class CreateUser(graphene.Mutation):
             last_name=last_name,
             email=email,
             password = str(
-                bcrypt.graphene_password_hash(password),
+                bcrypt.generate_password_hash(password),
                 'utf-8'
             )
         )
