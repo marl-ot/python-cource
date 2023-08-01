@@ -9,3 +9,4 @@ graphene-sqlalchemy
 Flask-Bcrypt
 Flask-GraphQL-Auth
 psycopg2-binary
+requests
