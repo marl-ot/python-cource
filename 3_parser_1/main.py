@@ -63,6 +63,8 @@ async def parseProductPage(url: str) -> dict:
 
         html = etree.fromstring(response.text, HTMLParser())
 
+        dump["product_url"] = url
+
         dump["name"] = html.xpath(
             '//div[@class="three_fifth first"]/h2/text()')[0]
 
