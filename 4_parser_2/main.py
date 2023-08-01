@@ -11,7 +11,7 @@ import json
 from datetime import datetime
 import time
 
-start = time.time()
+# start = time.time()
 
 MAIN_URL = "https://amazin.su"
 URL = "https://amazin.su/shop/zotovary"
@@ -152,7 +152,7 @@ if __name__ == "__main__":
     while True:
         asyncio.run(main())
 
-        # time.sleep(5 * 24 * 60 * 60)
+        time.sleep(5 * 24 * 60 * 60)
 
-end = time.time() - start
-print(end)
+# end = time.time() - start
+# print(end)
