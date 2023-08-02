@@ -35,9 +35,9 @@
 
 ### <div style="text-align:center"><font size=5>Практическое задание №3.</font></div>
 
-**<div style="text-align:center"><font size=4>Тема: Парсер сайта http://dog-60.ru</font></div>**
+**<div style="text-align:center"><font size=4>Тема: Парсер сайта [dog-60.ru](http://dog-60.ru/)</font></div>**
 
-**Задание:** написать парсер для http://dog-60.ru
+**Задание:** написать парсер для [dog-60.ru](http://dog-60.ru/)
 
 Все категории (украшения и амуниция). По каждому из пунктов при их наличии:
 - название, 
