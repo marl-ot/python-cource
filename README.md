@@ -54,9 +54,9 @@
 
 ### <div style="text-align:center"><font size=5>Практическое задание №4.</font></div>
 
-**<div style="text-align:center"><font size=4>Тема: Парсер сайта amazin.su</font></div>**
+**<div style="text-align:center"><font size=4>Тема: Парсер сайта [amazin.su](https://amazin.su/)</font></div>**
 
-**Задание:** написать парсер для amazin.su
+**Задание:** написать парсер для [amazin.su](https://amazin.su/)
 
 Парсинг каталога товаров в категории зоотовары. По каждому параметру при его наличии:
 - название, 
